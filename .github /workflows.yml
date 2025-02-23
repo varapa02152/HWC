@@ -21,10 +21,6 @@ jobs:
         DOCKER_WORKING_DIRECTORY: ./docker
         KUBERNETES_WORKING_DIRECTORY: ./kubernetes
       steps:
-      #  Runner
-      - uses: actions/checkout@v3
-      - name: Run config.sh
-        run: ./config.sh --url https://github.com/varapa02152/HWC --token AMJP7EIR46NHIOXLVJ6C3IDHXMDGU
       #  Login to SWR
       - name: Login to SWR
         uses: huaweicloud/swr-login@v1
