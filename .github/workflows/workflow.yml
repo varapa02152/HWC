@@ -40,14 +40,14 @@ jobs:
         run: |
           docker push swr.ap-southeast-2.myhuaweicloud.com/varapa/"${{ env.IMAGE_NAME }}":"${{ env.GITHUB_SHA }}"
       # Login to CCE
-      - name: Login to CCE
-        uses: huaweicloud/cce-credential-action@v1.0.2
-        with:
-          region: ap-southeast-2
-          access-key-id: ${{ secrets.ACCESSKEY }}
-          access-key-secret: ${{ secrets.SECRETACCESSKEY }}
-          project-id: ${{ env.PROJECT_ID }}
-          cluster-id: ${{ env.CLUSTER_ID }}
+      #- name: Login to CCE
+      #  uses: huaweicloud/cce-credential-action@v1.0.2
+      #  with:
+      #    region: ap-southeast-2
+      #    access-key-id: ${{ secrets.ACCESSKEY }}
+      #    access-key-secret: ${{ secrets.SECRETACCESSKEY }}
+      #    project-id: ${{ env.PROJECT_ID }}
+      #    cluster-id: ${{ env.CLUSTER_ID }}
        #Deploy to CCE
       - name: Deploy to CCE
         run: |
