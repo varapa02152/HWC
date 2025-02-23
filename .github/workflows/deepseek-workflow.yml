@@ -34,7 +34,7 @@ jobs:
       # Build the Docker image
       - name: Build the Docker image
         run: |
-         docker build -t swr.ap-southeast-2.myhuaweicloud.com/varapa/${{ env.IMAGE_NAME }}:${{ env.GITHUB_SHA }} -f ./docker/docker/deepseek-docker/Dockerfile .
+         docker build -t swr.ap-southeast-2.myhuaweicloud.com/varapa/${{ env.IMAGE_NAME }}:${{ env.GITHUB_SHA }} -f ./docker/deepseek-docker/Dockerfile .
       # Push the Docker image to SWR
       - name: Push the image to SWR
         run: |
