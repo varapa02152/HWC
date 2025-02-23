@@ -34,8 +34,7 @@ jobs:
       # Build the Docker image
       - name: Build the Docker image
         run: |
-          
-          docker build -t $SWR_ENDPOINT/$SWR_ORGANIZATION_NAME/$IMAGE_NAME:$GITHUB_SHA -f ./docker/Dockerfile .
+         docker build -t ${{ env.SWR_ENDPOINT }}/${{ env.SWR_ORGANIZATION_NAME }}/${{ env.IMAGE_NAME }}:${{ env.GITHUB_SHA }} -f ./docker/Dockerfile .
       # Push the Docker image to SWR
       - name: Push the image to SWR
         run: |
