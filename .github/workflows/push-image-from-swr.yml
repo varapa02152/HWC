@@ -25,7 +25,7 @@ jobs:
       - name: Login to SWR
         uses: huaweicloud/swr-login@v2.1.0
         with:
-          region: ap-bangkok
+          region: ${{ env.REGION }}
           access-key-id: ${{ secrets.ACCESSKEY }}
           access-key-secret: ${{ secrets.SECRETACCESSKEY }}
       # Check out the code
