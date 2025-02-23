@@ -28,6 +28,6 @@ EXPOSE 11434
 # RUN ollama pull deepseek-r1
 # Start Ollama service by default
 # CMD ["ollama", "serve"]
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
-CMD ["/entrypoint.sh"]
+COPY entrypoint.sh /docker/deepseek-docker/entrypoint.sh
+RUN chmod +x /docker/deepseek-docker/entrypoint.sh
+CMD ["/docker/deepseek-docker/entrypoint.sh"]
