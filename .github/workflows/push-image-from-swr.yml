@@ -4,7 +4,7 @@ name: Huawei Cloud CCE - CI/CD Pipeline
 jobs:
 
   build-publish-deploy:
-      name: Push SWR
+      name: Build, Push and Deploy
       runs-on: ubuntu-latest
       env:
         REGION: ${{ secrets.REGION }}
