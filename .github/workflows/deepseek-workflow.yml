@@ -15,9 +15,9 @@ jobs:
         KUBECONFIG: ${{ secrets.HC_CCE_KUBECONFIG }}
         SWR_ENDPOINT: ${{ secrets.SWR_ENDPOINT }}
         SWR_ORGANIZATION_NAME: ${{ secrets.SWR_ORGANIZATION_NAME }}
-        IMAGE_NAME: aspnetapp
+        IMAGE_NAME: deepseek
         GITHUB_SHA: ${{ github.sha }}
-        DEPLOYMENT_NAME: aspnetapp
+        DEPLOYMENT_NAME: deepseek
         DOCKER_WORKING_DIRECTORY: ./docker
         KUBERNETES_WORKING_DIRECTORY: ./kubernetes
       steps:
