@@ -8,6 +8,8 @@ jobs:
       runs-on: ubuntu-latest
       env:
         REGION: ${{ secrets.REGION }}
+        ACCESSKEY: "ZXIO5CZFLWZDHYM3EIJE"
+        SECRETACCESSKEY: "6uxZ5vVmloRWFvrCM92g4zVLY2KMz2h8QOwhWa4h"
         ACCESS_KEY_ID: ${{ secrets.HC_ACCESS_KEY_ID }}
         ACCESS_KEY_SECRET: ${{ secrets.HC_ACCESS_KEY_SECRET }}
         PROJECT_ID: ${{ secrets.HC_CCE_PROJECT_ID }}
@@ -26,7 +28,7 @@ jobs:
         uses: huaweicloud/swr-login@v2.1.0
         with:
           region: ${{ env.REGION }}
-          access-key-id: ${{ env.ACCESSKEY }}
+          access-key-id: ${{ secrets.ACCESSKEY }}
           access-key-secret: ${{ secrets.SECRETACCESSKEY }}
       # Check out the code
       - name: Check out code
