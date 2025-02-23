@@ -48,6 +48,7 @@ jobs:
           access-key-secret: ${{ env.ACCESS_KEY_SECRET }}
           project-id: ${{ env.PROJECT_ID }}
           cluster-id: ${{ env.CLUSTER_ID }}
+          
       # Deploy to CCE
       - name: Deploy to CCE
         run: |
