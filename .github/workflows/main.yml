@@ -41,7 +41,7 @@ jobs:
           docker push "${{ env.SWR_ENDPOINT }}"/"${{ env.SWR_ORGANIZATION_NAME }}"/"${{ env.IMAGE_NAME }}":"${{ env.GITHUB_SHA }}"
       # Login to CCE
       - name: Login to CCE
-        uses: huaweicloud/cce-cluster-credentials@v1.0.2
+        uses: huaweicloud/cce-credential-action@v1.0.2
         with:
           region: ${{ env.REGION }}
           access-key-id: ${{ env.ACCESS_KEY_ID }}
