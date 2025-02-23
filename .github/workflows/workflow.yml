@@ -34,11 +34,11 @@ jobs:
       # Build the Docker image
       - name: Build the Docker image
         run: |
-         docker build -t ${{ env.SWR_ENDPOINT }}/${{ env.SWR_ORGANIZATION_NAME }}/${{ env.IMAGE_NAME }}:${{ env.GITHUB_SHA }} -f ./docker/Dockerfile .
+         docker build -t swr.ap-southeast-2.myhuaweicloud.com/varapa/${{ env.IMAGE_NAME }}:${{ env.GITHUB_SHA }} -f ./docker/Dockerfile .
       # Push the Docker image to SWR
       - name: Push the image to SWR
         run: |
-          docker push "${{ env.SWR_ENDPOINT }}"/"${{ env.SWR_ORGANIZATION_NAME }}"/"${{ env.IMAGE_NAME }}":"${{ env.GITHUB_SHA }}"
+          docker push swr.ap-southeast-2.myhuaweicloud.com/varapa/"${{ env.IMAGE_NAME }}":"${{ env.GITHUB_SHA }}"
       # Login to CCE
       - name: Login to CCE
         uses: huaweicloud/cce-credential-action@v1.0.2
