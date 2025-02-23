@@ -51,5 +51,7 @@ jobs:
        #Deploy to CCE
       - name: Deploy to CCE
         run: |
-          sed -i'' -e 's/IMAGE_LABEL/${{ env.GITHUB_SHA }}/g' "${{ env.KUBERNETES_WORKING_DIRECTORY }}"/*deployment.yaml
-          kubectl apply -f "${{ env.KUBERNETES_WORKING_DIRECTORY }}"
+      #    sed -i'' -e 's/IMAGE_LABEL/${{ env.GITHUB_SHA }}/g' "${{ env.KUBERNETES_WORKING_DIRECTORY }}"/*deployment.yaml
+      #    kubectl apply -f "${{ env.KUBERNETES_WORKING_DIRECTORY }}"
+          echo "${{ secrets.HC_CCE_KUBECONFIG }}" > kubeconfig.yaml
+          export KUBECONFIG=$(pwd)/kubeconfig.yaml
