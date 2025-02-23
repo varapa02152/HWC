@@ -16,8 +16,8 @@ jobs:
       - name: Log in to Huawei Cloud SWR
         uses: huaweicloud/swr-login@v2.1.0
         with:
-          access-key-id: ${{ secrets.ACCESSKEY }}
-          access-key-secret: ${{ secrets.SECRETACCESSKEY }}
+          ACCESS_KEY_ID: ${{ secrets.ACCESSKEY }}
+          ACCESS_KEY_SECRET: ${{ secrets.SECRETACCESSKEY }}
           region: ${{ env.REGION_ID }}
 
       - name: Build, Tag, and Push Image to Huawei Cloud SWR
