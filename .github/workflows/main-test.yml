@@ -23,7 +23,7 @@ jobs:
       steps:
       #  Login to SWR
       - name: Login to SWR
-        uses: huaweicloud/swr-login@branch
+        uses: huaweicloud/swr-login@main
         with:
           region: ${{ env.REGION }}
           access-key-id: ${{ env.ACCESS_KEY_ID }}
@@ -41,7 +41,7 @@ jobs:
           docker push "${{ env.SWR_ENDPOINT }}"/"${{ env.SWR_ORGANIZATION_NAME }}"/"${{ env.IMAGE_NAME }}":"${{ env.GITHUB_SHA }}"
       # Login to CCE
       - name: Login to CCE
-        uses: huaweicloud/cce-cluster-credentials@branch
+        uses: huaweicloud/cce-cluster-credentials@main
         with:
           region: ${{ env.REGION }}
           access-key-id: ${{ env.ACCESS_KEY_ID }}
